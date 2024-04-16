@@ -9,3 +9,12 @@ Escriba un programa que:
 - guarde la información del jugador (nombre, apellido, apodo) de forma conveniente.
 - imprima en consola un mensaje en el formato: {nombre} "{apodo}" {apellido} (notesé las comillas es parte de lo impreso).
 */
+
+var juagdor = {
+    nombre: "Luciano",
+    apellido: "Rodriguez",
+    apodo: "Lucho",
+    fechanacimiento: "2003/07/16"
+}
+
+console.log("los datos del juagdor que esta buscando son  nombre: " + juagdor.nombre + " apellido: " + juagdor.apellido + " y apodo:" + juagdor.apodo);

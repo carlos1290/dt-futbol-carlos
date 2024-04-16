@@ -16,3 +16,40 @@ Escriba un programa que:
 Tip: consulten los métodos de la clase Date
 https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date
 */
+var jugador = {
+  nombre: "Luciano",
+  apellido: "Rodríguez",
+  apodo: "Lucho",
+  fechaNacimiento: "2003-07-16"
+};
+
+function calcularEdad(jugador) {
+  var nacimiento = new Date(jugador.fechaNacimiento);
+  var fechaActual = new Date();
+  var edad = fechaActual.getFullYear() - nacimiento.getFullYear();
+  // Verificar si el cumpleaños ha ocurrido este año
+  var jugador = {
+    nombre: "Luciano",
+    apellido: "Rodríguez",
+    apodo: "Lucho",
+    fechaNacimiento: "2003-07-16"
+  };
+
+  function calcularEdad(jugador) {
+    var nacimiento = new Date(jugador.fechaNacimiento);
+    var fechaActual = new Date();
+    var edad = fechaActual.getFullYear() - nacimiento.getFullYear();
+    // Verificar si el cumpleaños ha ocurrido este año
+    if (nacimiento.getMonth() > fechaActual.getMonth() || (nacimiento.getMonth() === fechaActual.getMonth() && nacimiento.getDate() > fechaActual.getDate())) {
+      edad--;
+    }
+    return edad;
+  }
+
+  var edadjugador = calcularEdad(jugador);
+
+  return edad;
+}
+
+var edadjugador = calcularEdad(jugador);
+console.log("la edad del juagdor " + jugador.nombre + " " + jugador.apellido + " es " + edadjugador);
